@@ -3,7 +3,7 @@ Major revision of the <a href="https://github.com/pixelpost/pixelpost">original 
 
 Remark:
 1. patched the codes to make it work with PHP7.4 and MariaDB10.5;
-2. abandoned the installation - initial installation can be done by importing the sql database into MariaDB (localhost.sql);
+2. abandoned the original installation steps - installation now can be done by importing the sql database into MariaDB (localhost.sql);
 3. code tuned and updated for my personal preference;
 4. some functions that I don't need are not fixed;
 5. use with your own risk;
