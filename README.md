@@ -11,3 +11,4 @@ Installation:
 2. install PHP (work with PHP7.0 and above, not backward compatible);
 3. install MariaDB ([should] work with 5.0 and above) and phpmyadmin (optional);
 4. import localhost.sql for initial installation (recommend to use phpmyadmin);
+5. change mysql connect parameters in /includes/pixielpost.php;
