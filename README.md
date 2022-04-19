@@ -2,9 +2,11 @@
 Major revision of the <a href="https://github.com/pixelpost/pixelpost">original pixelpost</a> to make it [mostly] work with PHP7.0 and above.
 
 Remark:
-1. patched lots of codes to make it work with PHP7.4 and MariaDB10.5;
+1. patched the codes to make it work with PHP7.4 and MariaDB10.5;
 2. abandoned the installation - initial installation can be done by importing the sql database into MariaDB (localhost.sql);
-3. code tuned and updated for my personal preference - use with your own risk;
+3. code tuned and updated for my personal preference;
+4. some functions that I don't need is not fixed;
+5. use with your own risk;
 
 Installation:
 1. install apache2/nginx/httpd/other web servers;
