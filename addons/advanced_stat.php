@@ -209,10 +209,13 @@ function build_insertquery($pixelpost_db_prefix,$where,$thismonth)
 	$mostvisitors = mysqli_query($con, $query);
 	$m = 0;
 
-	while(list($count,$referer,$ip) = mysqli_fetch_row($mostvisitors))
+	if (null!=$mostvisitors)
 	{
-		$insertquery .= ",'" .$count ."','" .$referer ."','" .$ip ."'";
-		$m++;
+		while(list($count,$referer,$ip) = mysqli_fetch_row($mostvisitors))
+		{
+			$insertquery .= ",'" .$count ."','" .$referer ."','" .$ip ."'";
+			$m++;
+		}
 	}
 	
 	for ($k = $m ; $k <5 ;$k++)
@@ -277,7 +280,6 @@ function stat_update_month($pixelpost_db_prefix,$thismonth)
 {
 	global $con;
 	$query = "select id as id from ".$pixelpost_db_prefix."stats where month = '$thismonth' LIMIT 0,1";
-	echo $query;
 	$query = mysqli_query($con, $query);
 	$monthexist = mysqli_fetch_row($query);
 

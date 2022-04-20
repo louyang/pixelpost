@@ -686,7 +686,7 @@ while(null!=$tags && isset($cdate) && list($tag, $cnt)  = mysqli_fetch_array($ta
 	}
 	else
 	{
-		substr_replace($rank_reversed,10-substr($rank,2,1),2,1);
+		substr_replace($rank_reversed,10-(float)substr($rank,2,1),2,1);
 	}
   //print($tag.'-'.$rank_reversed[2].'<br>');
 
