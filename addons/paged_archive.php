@@ -195,7 +195,7 @@ while(list($id, $name, $alt_name) = mysqli_fetch_row($query))
 	$count = mysqli_query($con, $queryr);
 	
 	if(null!=$count) $count = mysqli_fetch_array($count);
-	$count= $count['count'];
+	if(null!=$count) $count= $count['count'];
 
 	if ($count > 0){
 		if(isset($language_abr) && $language_abr == $default_language_abr)	$name = pullout($name);
