@@ -1,4 +1,4 @@
-# pixelpost
+# pixelpost - a PHP photo blog
 Major revision of the <a href="https://github.com/pixelpost/pixelpost">original pixelpost</a> to make it [mostly] work with PHP7.0 and above.
 
 Remark:
@@ -10,7 +10,7 @@ Remark:
 
 Installation:
 1. install apache2/nginx/httpd/other web servers;
-2. install PHP (work with PHP7.0 and above, not backward compatible);
+2. install PHP (works with PHP7.x and PHP8.x, not backward compatible);
 3. install MariaDB ([should] work with 5.0 and above) and phpmyadmin (optional);
 4. import localhost.sql for initial installation (recommend to use phpmyadmin);
 5. change mysql connect parameters in /includes/pixielpost.php;
