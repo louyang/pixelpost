@@ -378,7 +378,7 @@ if(isset($_GET['view']) && $_GET['view'] == "images")
 	
 		if(!isset($_GET['page']))	$page = "0";
 		else	$page = intval($_GET['page']);
- 		if(isset($_SESSION['page_pp'])) $_SESSION['page_pp'] = (int)$page;
+ 		$_SESSION['page_pp'] = (int)$page;
 		if(isset($_SESSION['numimg_pp'])) $_SESSION['numimg_pp'] = (int)$_SESSION['numimg_pp'];
     
 		if (isset($_SESSION['numimg_pp']) AND $_SESSION['numimg_pp'] == 0 OR !isset($_SESSION['numimg_pp']))  $_SESSION['numimg_pp'] = 10;
@@ -680,9 +680,12 @@ if(isset($_GET['view']) && $_GET['view'] == "images")
 			$tags = list_tags_edit($_GET['id']);
 
 			if ($cfgrow['altlangfile'] != 'Off')	$alt_tags = list_tags_edit($_GET['id'], "alt_");
-
-			echo "
-			<form method='post' action='$PHP_SELF?view=images&amp;x=update&amp;imageid=".$getid."&amp;page=".$_SESSION['page_pp']."' enctype='multipart/form-data' accept-charset='UTF-8'>";
+			if (isset($_SESSION['page_pp']))
+				{echo "
+			<form method='post' action='$PHP_SELF?view=images&amp;x=update&amp;imageid=".$getid."&amp;page=".$_SESSION['page_pp']."' enctype='multipart/form-data' accept-charset='UTF-8'>";}
+			else
+				{echo "
+			<form method='post' action='$PHP_SELF?view=images&amp;x=update&amp;imageid=".$getid."&amp;page=' enctype='multipart/form-data' accept-charset='UTF-8'>";}
 			echo "
 			<div class='jcaption'>$admin_lang_imgedit_reupimg</div>
 			<div class='content'>
