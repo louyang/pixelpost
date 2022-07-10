@@ -1,5 +1,5 @@
 # pixelpost - a PHP photo blog
-Major revision of the <a href="https://github.com/pixelpost/pixelpost">original pixelpost</a> to make it [mostly] work with PHP7.0 and above.
+Revision of the <a href="https://github.com/pixelpost/pixelpost">original pixelpost</a> to make it [mostly] work with PHP7.0 and above.
 
 Remark:
 1. patched the codes to make it work with PHP7.4 and MariaDB10.5;
